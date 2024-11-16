@@ -13,7 +13,7 @@ This is a simple note-taking app built using React.js and Material-UI. It allows
    `git clone https://github.com/YourUsername/my-keeper-app.git`
 
 2. Navigate to the project directory:
-`cd my-keeper-app`
+`cd keeper-app`
 
 3. Install dependencies:
 `npm install`
