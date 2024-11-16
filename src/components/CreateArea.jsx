@@ -6,11 +6,19 @@ import Fab from "@mui/material/Fab";
 function CreateArea({ onAdd, editingNote, saveEdit }) {
   const [note, setNote] = useState({ title: "", content: "" });
 
+  // useEffect(() => {
+  //   if (editingNote) {
+  //     setNote(editingNote);
+  //   }
+  // }, [editingNote]);
   useEffect(() => {
     if (editingNote) {
       setNote(editingNote);
+    } else {
+      setNote({ title: "", content: "" });
     }
   }, [editingNote]);
+
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -47,6 +55,7 @@ function CreateArea({ onAdd, editingNote, saveEdit }) {
       />
       <Zoom in={true}>
         <Fab onClick={handleSubmit}>
+          
           <AddIcon />
         </Fab>
       </Zoom>
